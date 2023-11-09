@@ -1,0 +1,141 @@
+/* Fontu içeri aktar */
+@import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
+
+/* Genel sayfa stilini tanımla */
+body {
+  font-family: 'Sniglet', cursive; /* Sayfa fontunu "Sniglet" olarak ayarla */
+  display: flex; /* İçeriği yatay düzende sırala */
+  align-items: center; /* İçeriği yatayda dikey olarak merkezle */
+  justify-content: center; /* İçeriği yatayda yatay olarak merkezle */
+  text-align: center; /* Metinleri ortala */
+  flex-direction: column; /* İçeriği dikey düzende sırala */
+  background-image: linear-gradient(to right, rgba(248, 0, 161, 0.176) 0%, rgb(35, 160, 249)); /* Arka plan resmi olarak bir lineer gradyan kullan */
+}
+
+/* Başlık etiketi stilleri */
+h1 {
+  color: #fff; /* Metin rengini beyaz yap */
+  letter-spacing: 5px; /* Harf aralığını ayarla */
+  text-transform: uppercase; /* Metinleri büyük harfle yaz */
+  text-shadow: 4px 3px 6px rgba(0, 0, 0, 1); /* Metin gölgesi ekleyin */
+}
+
+/* Arama bölümü stilini tanımla */
+.search {
+  position: relative; /* Göreceli bir konum kullan */
+}
+
+/* Arama kutusu stilini tanımla */
+.searchInput {
+  font-family: inherit; /* Sayfa fontunu kullan */
+  background-color: transparent; /* Arka plan rengini şeffaf yap */
+  border: none; /* Kenarlık olmasın */
+  font-size: 16px; /* Metin boyutunu ayarla */
+  padding: 15px; /* Dolguyu ayarla */
+  height: 10px; /* Yüksekliği ayarla (düzeltildi) */
+  width: 15px; /* Genişliği ayarla (düzeltildi) */
+  border-radius: 10px; /* Kenar yarıçapını ayarla */
+  transition: width 0.3s ease; /* Geçiş efekti ekle */
+}
+
+.searchInput, .searchBtn:focus {
+  outline: none; /* Odaklandığında çerçeve olmasın */
+}
+
+/* Arama düğmesi stilini tanımla */
+.searchBtn {
+  background-color: #264653; /* Arka plan rengini ayarla */
+  border: none; /* Kenarlık olmasın */
+  color: #fff; /* Metin rengini beyaz yap */
+  font-size: 33px; /* Metin boyutunu ayarla */
+  position: absolute; /* Sabit bir konum kullan */
+  top: 0; /* Üst kenara yapışık olacak şekilde konumlandır */
+  left: 0; /* Sol kenara yapışık olacak şekilde konumlandır */
+  border-radius: 10px; /* Kenar yarıçapını ayarla */
+  cursor: pointer; /* İşaretçi türünü ayarla */
+  transition: transform 0.3s ease; /* Geçiş efekti ekle */
+}
+
+/* Aktif arama durumu için stil değişiklikleri */
+.search.active .searchInput {
+  width: 200px; /* Genişliği artır */
+  background-color: #fff; /* Arka plan rengini beyaz yap */
+}
+
+.search.active .searchBtn {
+  transform: translateX(198px); /* Düğmeyi sağa kaydır */
+  background-color: #fff; /* Arka plan rengini beyaz yap */
+  color: tomato; /* Metin rengini değiştir */
+}
+
+/* Pokémon konteyner stilini tanımla */
+.poke-container {
+  margin-top: 20px; /* Üst boşluk ekleyin */
+  display: flex; /* İçeriği yatay düzende sırala */
+  flex-wrap: wrap; /* İçeriği sarma özelliğini etkinleştir */
+  justify-content: center; /* İçeriği yatayda yatay olarak merkezle */
+  align-items: center; /* İçeriği yatayda dikey olarak merkezle */
+  max-width: 85%; /* Maksimum genişliği ayarla */
+}
+
+/* Pokémon kartı stilini tanımla */
+.pokemon {
+  margin: 10px; /* Kenar boşluğunu ayarla */
+  padding: 20px; /* Dolguyu ayarla */
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; /* Kutu gölgesini ayarla */
+  color: #fefefe; /* Metin rengini beyaz yap */
+  border-radius: 10px; /* Kenar yarıçapını ayarla */
+}
+
+/* Resim konteyneri stilini tanımla */
+.image-container {
+  background-color: rgba(0, 0, 0, 0.5); /* Arka plan rengini ayarla */
+  border-radius: 75% 30% 60% 40% / 60% 40% 60% 40%; /* Kenar yarıçapını ayarla */
+}
+
+/* Resim stilini tanımla */
+.image-container img {
+  width: 180px; /* Genişliği ayarla */
+  opacity: 0.75; /* Saydamlığı ayarla */
+  transition: all 0.3s ease; /* Geçiş efekti ekle */
+}
+
+/* Fare üzerine gelindiğinde resim stilini değiştir */
+.pokemon:hover .image-container img {
+  opacity: 1; /* Saydamlığı artır */
+  transform: scale(1.25); /* Büyütmeyi ayarla */
+}
+
+/* Pokémon bilgi stilini tanımla */
+.poke-info {
+  margin-top: 20px; /* Üst boşluk ekleyin */
+}
+
+/* Pokémon kimlik numarası stilini tanımla */
+.poke-id {
+  background-color: rgba(0, 0, 0, 0.3); /* Arka plan rengini ayarla */
+  border-radius: 3rem; /* Kenar yarıçapını ayarla */
+  padding: 5px 10px; /* Dolguyu ayarla */
+  font-size: 0.85rem; /* Metin boyutunu ayarla */
+}
+
+/* Pokémon adı stilini tanımla */
+.poke-name {
+  letter-spacing: 2px; /* Harf aralığını ayarla */
+  margin: 15px 0 10px; /* Kenar boşluğunu ayarla */
+  text-transform: capitalize; /* Metinleri baş harfi büyük yap */
+}
+
+/* Küçük bilgi stilleri */
+.small small {
+  padding: 0 5px; /* Dolgu ekleyin */
+}
+
+/* Pokémon türü stilini tanımla */
+.poke-type {
+  margin-top: 10px; /* Üst boşluk ekleyin */
+}
