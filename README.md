@@ -30,4 +30,6 @@ Projeyi yerel bir sunucuda veya tarayıcınızda çalıştırmak için şu adım
 Bu projeyi kullanarak kendi Pokedex web uygulamanızı oluşturabilir ve Pokémon kartlarını göstermek için özelleştirmeler yapabilirsiniz. İyi çalışmalar!
 
 
-![Proje Çalıştırma GIF](C:\Users\omrgz\Downloads\İsimsiz video ‐ Clipchamp ile yapıldı (8).gif)
+[![Now in Android: 55] // Title
+(file:///C:/Users/omrgz/Downloads/İsimsiz%20video%20‐%20Clipchamp%20ile%20yapıldı%20(8).gif)] // Thumbnail
+(https://www.youtube.com/watch?v=Hc79sDi3f0U "Now in Android: 55") // Video Link
